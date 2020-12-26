@@ -50,6 +50,36 @@
                 "$gcc"
             ],
             "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "cl.exe build active file",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/Fe:",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${file}"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "clear",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                "${fileDirname}\\*.pdb,*.pdb,${fileDirname}\\*.ilk,*.ilk,${fileDirname}\\*.obj,*.obj",
+                "-Force"
+            ],
+            "group": "none",
+            "problemMatcher": []
         }
     ]
 }
