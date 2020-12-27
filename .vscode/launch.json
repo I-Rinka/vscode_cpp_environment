@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "console": "externalTerminal",//MSVC一般是GBK，使用外置中段不会乱码
+            "console": "externalTerminal", //MSVC一般是GBK，使用外置中段不会乱码
             "name": "MSVC Debug",
             "type": "cppvsdbg",
             "request": "launch",
@@ -13,9 +13,21 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],
             "externalConsole": false,
             "preLaunchTask": "cl.exe build active file",
+            "postDebugTask": "clear"
+        },
+        {
+            "console": "externalTerminal", //MSVC一般是GBK，使用外置中段不会乱码
+            "name": "MSVC Default Env",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "preLaunchTask": "cl.exe with default env",
             "postDebugTask": "clear"
         },
         {
