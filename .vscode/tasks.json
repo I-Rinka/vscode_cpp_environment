@@ -198,6 +198,16 @@
             ],
             "group": "none",
             "problemMatcher": []
+        },
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "build"
+            ],
+            "group": "none",
+            "problemMatcher": []
         }
     ]
 }
